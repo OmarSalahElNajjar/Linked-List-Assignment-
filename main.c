@@ -8,6 +8,7 @@ struct student
     int score;
     struct student*next;
 };
+
 struct student*head;
 int L=0;
 int number;
@@ -237,15 +238,6 @@ void create_linkedlist ()
     printf("#######################################################################\n");
 }
 
-int main()
-{
-
-    create_linkedlist();
-    insert();
-    //display ();
-
-    return 0;
-}
 
 
 
@@ -256,78 +248,13 @@ int main()
 
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-struct student {
-
-	char name [20];
-	int student_id ;
-	int day;
-	int month;
-	int year;
-	int score ;
-};
-
+/////////////////////////////////array code///////////////////////////////////////////////////
 void insertinbegin();
 void insertinend();
 void insertinmiddle();
 
-int main()
-{
-    printf("Welcome to our linked list assignment on github \n \n");
-    int noofstudents;
-    printf("Enter the number of students : \n"); /* this number of students in initialize dynamic array  */
-    scanf("%d", &noofstudents);
-    struct student *stdp = (struct student *)calloc(noofstudents , sizeof(struct student));
 
-  for(int i = 0; i < noofstudents; i++ )
-    {
-        strcpy(stdp[i].name, "0");
-        stdp[i].student_id = 0;
-        stdp[i].day= 0;
-        stdp[i].month = 0;
-        stdp[i].year = 0;
-        stdp[i].score = 0;
-    }
-
-
-    /* opertions */
-    printf("write 1 if you want to insert a student in the begin \n");
-    printf("write 2 if you want to insert a student in the end \n");
-    printf("write 3 if you want to insert a student in the middle\n");
-    printf("write 4 if you don't need to inset\n");
-
-     int operation;
-    /*choosing the operation you need*/
-    while (1){
-            printf ("\nEnter operation number :  ");
-            scanf("%d", &operation);
-    switch(operation){
-        case 1:
-            noofstudents = noofstudents+1;
-            insertinbegin (noofstudents, stdp);
-            break;
-        case 2:
-            noofstudents = noofstudents+1;
-            insertinend(noofstudents, stdp);
-            break;
-        case 3:
-            noofstudents = noofstudents+1;
-            insertinmiddle (noofstudents, stdp);
-            break;
-        case 4:
-            return 0;
-            break;
-        default:
-            printf ("\n \nPlease Enter the right operation number ");
-            break;
-    }}
-
-    return 0;
-}
-/*function to Insert a new student in the beginning*/
 void insertinbegin (int noofstudents, struct student *stdp){
 
 
@@ -473,6 +400,11 @@ void insertinmiddle (int noofstudents, struct student *stdp){
   }
 
     }
+
+
+
+
+
 
 
 
